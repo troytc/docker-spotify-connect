@@ -4,6 +4,7 @@ RUN apt-get update \
   && apt-get -y install build-essential curl portaudio19-dev unzip \
   
   && curl https://sh.rustup.rs -sSf | sh -s -- -y \
+  && source $HOME/.cargo/env \
   && cd /root \
   && curl -LO https://github.com/librespot-org/librespot/archive/master.zip \
   && unzip master.zip \
