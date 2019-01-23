@@ -1,8 +1,7 @@
 FROM debian:stable
 
-RUN apt-get -y install \
-  build-essential \
-  portaudio19-dev \
+RUN apt-get update \
+  && apt-get -y install build-essential portaudio19-dev \
   
   && curl https://sh.rustup.rs -sSf | sh -s -- -y \
   && cd /root \
