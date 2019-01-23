@@ -12,7 +12,7 @@ RUN apt-get -y install \
   && cargo build --release --features pulseaudio-backend
 
 ENV SPOTIFY_NAME Docker
-ENV SPOTIFY_USER
-ENV SPOTIFY_PASS
+ENV SPOTIFY_USER user@example.com
+ENV SPOTIFY_PASS password
 
 CMD /root/librespot-master/target/release/librespot --backend pulseaudio -n "$SPOTIFY_NAME" -u "$SPOTIFY_USER" -p "$SPOTIFY_PASS"
